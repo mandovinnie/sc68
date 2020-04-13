@@ -12,8 +12,13 @@
 # include "sc.h"
 #endif /* PSC */
 
-extern	char	*malloc();
-extern	char	*realloc();
+/* 
+ * extern	char	*malloc();
+ * extern	char	*realloc();
+ *  */
+
+#include <string.h>
+#include <stdlib.h>
 
 #if defined(BSD42) || defined(BSD43)
 #define	memcpy(dest, source, len)	bcopy(source, dest, (unsigned int)len);
